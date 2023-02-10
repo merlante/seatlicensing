@@ -5,6 +5,9 @@ import java.util.Optional;
 import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;
 
+import org.acme.entities.AssignedSeat;
+import org.acme.entities.LicensedTenant;
+
 @ApplicationScoped
 public class SeatAssignmentService {
 

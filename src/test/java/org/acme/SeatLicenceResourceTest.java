@@ -1,6 +1,8 @@
 package org.acme;
 
 import io.quarkus.test.junit.QuarkusTest;
+
+import org.acme.entities.LicensedTenant;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
@@ -44,6 +46,11 @@ public class SeatLicenceResourceTest {
           .when().post("/tenant")
           .then()
              .statusCode(200);
+
+        given()
+          .when().get("/tenant/aspian")
+          .then()
+             .statusCode(404);
     }
 
     /*@Test
